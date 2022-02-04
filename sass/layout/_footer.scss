@@ -1,0 +1,92 @@
+.footer {
+  background-color: var(--hero-color);
+}
+.footer__container {
+  display: flex;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.footer__container-left,
+.footer__container-right,
+.footer__container-end {
+  align-self: baseline;
+}
+.footer__container-left {
+  flex-grow: 1;
+}
+.footer__container-right {
+  padding-left: 70px;
+}
+.footer__container-end {
+  padding-left: 93px;
+}
+.footer-contact {
+  list-style-type: none;
+  font-style: normal;
+}
+.footer-contact__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+.footer-contact__address {
+  @include font(14px, 400, 1.71);
+  color: var(--primary-white-color);
+}
+.footer-contact__link {
+  @include font(14px, 400, 1.71);
+  color: var(--footer-link-color);
+  transition: color var(--transition-duration) var(--transition-timing-function);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+.footer__title {
+  @include font($fs: 14px, $lh: 1.14);
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+  margin-bottom: 20px;
+}
+.footer-social {
+  @extend .team-social;
+}
+.footer-social__item {
+  @extend .team-social__item;
+}
+.footer-social__link {
+  @extend .team-social__link;
+  background-color: rgba(248, 248, 248, 0.1);
+  color: var(--primary-white-color);
+  transition: background-color var(--transition-duration) var(--transition-timing-function);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
+}
+.footer-social__icon {
+  fill: currentColor;
+}
+.footer__form-subscribe {
+  @extend %align-list;
+  justify-content: space-between;
+}
+.footer__form-online {
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  outline: none;
+  padding: 15px;
+  margin-right: 12px;
+  color: var(--primary-white-color);
+  &::placeholder {
+    @include font(16px, 400, 1.25);
+    align-items: center;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+.footer-submit__icon {
+  margin-left: 10px;
+}

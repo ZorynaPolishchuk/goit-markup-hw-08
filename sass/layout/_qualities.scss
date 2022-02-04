@@ -1,0 +1,40 @@
+.qualities {
+  padding-top: var(--section-padding);
+}
+.qualities-content {
+  display: flex;
+  justify-content: space-between;
+}
+.qualities-content__item {
+  & + & {
+    margin-left: 30px;
+  }
+  @extend %align-list;
+  width: 270px;
+  height: 120px;
+  background-color: var(--team-color);
+  justify-content: center;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+.qualities-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
+  margin-bottom: -10px;
+}
+.qualities-list__item {
+  margin-right: 30px;
+  margin-bottom: 10px;
+  flex-basis: calc((100% - 4 * 30px) / 4);
+}
+.qualities-list__title {
+  @include font($fs: 14px, $lh: 1.14);
+  text-transform: uppercase;
+  color: var(--title-text-color);
+  margin-bottom: 10px;
+}
+.qualities-list__after-title {
+  @include font($fs: 14px, $fw: 400, $lh: 1.71);
+  color: var(--primary-text-color);
+}

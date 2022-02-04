@@ -1,0 +1,20 @@
+.header__logo-1 {
+  color: var(--accent-color);
+}
+.header__logo {
+  @include font-logo;
+  margin-right: 93px;
+  text-decoration: none;
+  font-family: Raleway, sans-serif;
+}
+.header__logo-2 {
+  color: var(--title-text-color);
+}
+.footer__logo {
+  @extend .header__logo;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.footer__logo-2 {
+  color: var(--primary-white-color);
+}

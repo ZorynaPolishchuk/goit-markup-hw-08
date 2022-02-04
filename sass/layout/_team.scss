@@ -1,0 +1,95 @@
+.team {
+  background-color: var(--team-color);
+}
+.team__container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include desk {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+  }
+}
+.team__title {
+  @include font($fs: 28px, $lh: 1.17);
+  text-align: center;
+  color: var(--title-text-color);
+  margin-bottom: 30px;
+  @include desk {
+    font-size: 36px;
+    line-height: 1.16px;
+    margin-bottom: 50px;
+  }
+}
+.team-list {
+  margin-bottom: -30px;
+  @include tab {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
+}
+.team-list__item {
+  margin-bottom: 30px;
+  background-color: var(--primary-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  border-top-style: none;
+  @include tab {
+    width: calc(100% / 2 - 30px);
+    margin-left: 30px;
+  }
+  @include desk {
+    width: calc(100% / 4 - 30px);
+  }
+}
+
+.team-list__border {
+  padding-top: 30px;
+  padding-bottom: 24px;
+  text-align: center;
+  @include desk {
+    padding-bottom: 30px;
+  }
+}
+.employees__title {
+  font-weight: 500;
+  color: var(--title-text-color);
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.1875;
+  letter-spacing: 0.03em;
+}
+.employees__text {
+  @extend .employees__title;
+  color: var(--primary-text-color);
+  margin-bottom: 16px;
+}
+.team-social {
+  display: flex;
+  justify-content: center;
+}
+.team-social__item {
+  & + & {
+    margin-left: 10px;
+  }
+}
+.team-social__link {
+  @extend %align-list;
+  width: 44px;
+  height: 44px;
+  background-color: var(--primary-white-color);
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--icon-fill);
+  transition: background-color var(--transition-duration) var(--transition-timing-function),
+    color var(--transition-duration) var(--transition-timing-function);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--primary-white-color);
+  }
+}
+.team-social__icon {
+  fill: currentColor;
+}

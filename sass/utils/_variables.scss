@@ -1,0 +1,18 @@
+:root {
+  --accent-color: #2196f3;
+  --title-text-color: #212121;
+  --primary-text-color: #757575;
+  --primary-white-color: #ffffff;
+  --hero-color: #2f303a;
+  --team-color: #f5f4fa;
+  --footer-link-color: rgba(255, 255, 255, 0.6);
+  --icon-fill: #afb1b8;
+  --section-padding: 94px;
+  --transition-duration: 250ms;
+  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+body {
+  font-family: Roboto, sans-serif;
+  background-color: var(--primary-white-color);
+  color: var(--primary-text-color);
+}

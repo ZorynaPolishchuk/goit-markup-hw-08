@@ -1,0 +1,169 @@
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity var(--transition-duration) var(--transition-timing-function),
+    visibility var(--transition-duration) var(--transition-timing-function);
+}
+.modal {
+  width: 528px;
+  min-height: 581px;
+  background-color: var(--primary-white-color);
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--transition-duration) var(--transition-timing-function),
+    box-shadow var(--transition-duration) var(--transition-timing-function);
+  padding: 40px;
+}
+.modal__btn-close {
+  @extend %align-list;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--primary-white-color);
+  justify-content: center;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  transition: color var(--transition-duration) var(--transition-timing-function);
+}
+.modal__btn-close__icon {
+  transition: fill var(--transition-duration) var(--transition-timing-function);
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+.backdrop.is-hidden {
+  .modal {
+    transform: translate(-50%, -50%) scale(1.5) rotate(360deg);
+  }
+}
+.modal__title {
+  @include font;
+  text-align: center;
+  color: var(--title-text-color);
+  margin-bottom: 12px;
+}
+.form__field {
+  display: flex;
+  flex-direction: column;
+}
+.form__field:not(:last-child) {
+  margin-bottom: 10px;
+}
+.input__text {
+  display: block;
+  @include font(12px, 400, 1.16, 0.01em);
+  color: var(--primary-text-color);
+  margin-bottom: 4px;
+}
+.input__wrap {
+  position: relative;
+}
+.form__input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 42px;
+  cursor: pointer;
+  outline: none;
+  transition: border-color var(--transition-duration) var(--transition-timing-function);
+  &:focus {
+    border-color: var(--accent-color);
+    & + .input__icon {
+      fill: var(--accent-color);
+    }
+  }
+}
+.input__icon {
+  position: absolute;
+  left: 12px;
+  top: 11px;
+  bottom: 11px;
+  transition: fill var(--transition-duration) var(--transition-timing-function);
+}
+.form__text {
+  width: 100%;
+  height: 100px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 16px;
+  padding-top: 12px;
+  resize: none;
+  cursor: pointer;
+  outline: none;
+  transition: border-color var(--transition-duration) var(--transition-timing-function);
+  &:focus {
+    border-color: var(--accent-color);
+  }
+  &::placeholder {
+    @include font(14px, 400, 1.14, 0.01em);
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+.form__field-checkbox {
+  @extend %align-list;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.check__text {
+  @extend %align-list;
+  @include font(14px, 400, 1.71);
+  color: var(--primary-text-color);
+  position: relative;
+  justify-content: center;
+}
+.check__text-link {
+  text-decoration-line: underline;
+  color: var(--accent-color);
+}
+.check__text {
+  span {
+    @extend %align-list;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--title-text-color);
+    border-radius: 2px;
+    margin-right: 8px;
+    justify-content: center;
+    cursor: pointer;
+  }
+}
+.policy__icon {
+  fill: transparent;
+}
+.policy__check:checked + .check__text span {
+  border: none;
+  background-color: var(--accent-color);
+}
+.policy__check:checked + .check__text .policy__icon {
+  fill: var(--primary-white-color);
+}
+.form__btn {
+  @extend %align-list;
+  justify-content: center;
+}
+.form__btn-send {
+  padding: 10px 55px 10px 56px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
