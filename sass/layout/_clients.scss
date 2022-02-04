@@ -1,6 +1,9 @@
 .clients__container {
   padding-top: 60px;
   padding-bottom: 60px;
+  @include tab {
+    padding-top: 36px;
+  }
   @include desk {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
