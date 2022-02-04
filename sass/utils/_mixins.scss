@@ -4,7 +4,7 @@
   line-height: $lh;
   letter-spacing: $ls;
 }
-@mixin font-logo($fs: 26px, $fw: 700, $lh: 1.19, $ls: 0.03em) {
+@mixin font-logo($fs: 24px, $fw: 700, $lh: 1.16, $ls: 0.03em) {
   font-size: $fs;
   font-weight: $fw;
   line-height: $lh;

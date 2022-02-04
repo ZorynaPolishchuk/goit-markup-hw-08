@@ -97,9 +97,9 @@ img {
 }
 
 .header__logo, .footer__logo {
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 1.19;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   margin-right: 93px;
   text-decoration: none;
@@ -436,15 +436,15 @@ img {
   margin-left: auto;
   border: none;
   background-color: var(--primary-white-color);
+}
+
+.menu__btn-open__icon {
+  fill: currentColor;
   transition: color var(--transition-duration) var(--transition-timing-function);
 }
 
-.menu-open-btn__icon {
-  transition: fill var(--transition-duration) var(--transition-timing-function);
-}
-
-.menu-open-btn__icon:hover, .menu-open-btn__icon:focus {
-  fill: var(--accent-color);
+.menu__btn-open__icon:hover, .menu__btn-open__icon:focus {
+  color: var(--accent-color);
 }
 
 .mob-menu.is-hidden {
@@ -476,15 +476,15 @@ img {
   display: block;
   border: none;
   background-color: var(--primary-white-color);
+}
+
+.menu__btn-close__icon {
+  fill: currentColor;
   transition: color var(--transition-duration) var(--transition-timing-function);
 }
 
-.menu-open-btn__icon {
-  transition: fill var(--transition-duration) var(--transition-timing-function);
-}
-
-.menu-open-btn__icon:hover, .menu-open-btn__icon:focus {
-  fill: var(--accent-color);
+.menu__btn-close__icon:hover, .menu__btn-close__icon:focus {
+  color: var(--accent-color);
 }
 
 .mob-menu-list__item:not(:last-child) {
@@ -498,6 +498,7 @@ img {
   letter-spacing: 0.02em;
   color: var(--title-text-color);
   text-align: center;
+  transition: color var(--transition-duration) var(--transition-timing-function);
 }
 
 .mob-menu-list__link:hover, .mob-menu-list__link:focus {
