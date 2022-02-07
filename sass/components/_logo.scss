@@ -3,9 +3,12 @@
 }
 .header__logo {
   @include font-logo;
-  margin-right: 93px;
   text-decoration: none;
   font-family: Raleway, sans-serif;
+  margin-right: 276px;
+  @include tab {
+    margin-right: 93px;
+  }
 }
 .header__logo-2 {
   color: var(--title-text-color);
