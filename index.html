@@ -16,7 +16,7 @@
   </head>
   <body>
     <!-- --------------HEADER MENU CONTAINER----------------->
-<!-- <header class="header">
+<header class="header">
   <div class="container header__container">
     <nav class="site-nav">
       <a class="header__logo" href="./index.html"><span class="header__logo-1">Web</span><span
@@ -91,16 +91,16 @@
       </div>
     </div>
   </div>
-</header> -->
+</header>
     <!-------------MAIN MENU CONTAINER----------------->
     <main>
       <!--------------------HERO SECTION----------------->
-<!-- <section class="hero">
+<section class="hero">
   <div class="container hero__container">
     <h1 class="hero__main-title">Эффективные решения для вашего бизнеса</h1>
     <button class="hero__btn" type="button" data-modal-open>Заказать услугу</button>
   </div>
-</section> -->
+</section>
 <!--------------------QUALITIES SECTION----------------->
 <!-- <section class="qualities">
   <div class="container qualities__container">
@@ -419,9 +419,9 @@
       </section>
     </main> -->
     <!----------FOOTER MENU CONTAINER-------------------->
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container footer__container">
-        <div class="footer__container-left">
+        <div class="footer__container-start">
           <a class="footer__logo" href="./index.html"><span class="header__logo-1">Web</span><span class="footer__logo-2">Studio</span></a>
           <address class="address">
             <ul class="footer-contact">
@@ -443,7 +443,7 @@
             </ul>
           </address>
         </div>
-        <div class="footer__container-right">
+        <div class="footer__container-centr">
           <h3 class="footer__title">присоединяйтесь</h3>
           <ul class="footer-social">
             <li class="footer-social__item">
@@ -490,65 +490,65 @@
           </form>  
         </div>   
       </div>
-    </footer> -->
+    </footer>
 <!--------------------------MODAL WINDOW-------------------->
-    <div class="backdrop is-hidden" data-modal>
-      <div class="modal">
-        <button class="modal__btn-close" data-modal-close>
-        <svg class="modal__btn-close__icon" width="18" height="18">
-          <use href="./images/icons.svg#icon-modal-close"> </use>
-        </svg>
-        </button>
-        <p class="modal__title">Оставьте свои данные, мы вам перезвоним</p>
-        <form action="#">
-          <div class="form__field">
-            <label class="input__text" for="user-name">Имя</label>
-            <div class="input__wrap">
-              <input type="text" class="form__input" name="user-name" id="user-name" />
-              <svg class="input__icon" width="18" height="18">
-              <use href="./images/icons.svg#icon-person"></use>
-              </svg>
-            </div>
-          </div>
-          <div class="form__field">
-            <label class="input__text" for="user-tel">Телефон</label>
-            <div class="input__wrap">
-              <input type="tel" class="form__input" name="user-tel" id="user-tel" />
-              <svg class="input__icon" width="18" height="18">
-                <use href="./images/icons.svg#icon-phone"></use>
-              </svg>
-            </div>
-          </div>
-          <div class="form__field">
-            <label class="input__text" for="user-email">Почта</label>
-            <div class="input__wrap">
-              <input type="email" class="form__input" name="user-email" id="user-email" />
-              <svg class="input__icon" width="18" height="18">
-                <use href="./images/icons.svg#icon-email-modal"></use>
-              </svg>
-            </div>
-          </div>
-          <div class="form__field">
-            <label class="input__text" for="user-text">Комментарий</label>
-              <textarea name="user-text" id="user-text" class="form__text" placeholder="Введите текст"></textarea>
-          </div>
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button class="modal__btn-close" data-modal-close>
+      <svg class="modal__btn-close__icon" width="18" height="18">
+        <use href="./images/icons.svg#icon-modal-close"> </use>
+      </svg>
+    </button>
+    <p class="modal__title">Оставьте свои данные, мы вам перезвоним</p>
+    <form action="#">
+      <div class="form__field">
+        <label class="input__text" for="user-name">Имя</label>
+        <div class="input__wrap">
+          <input type="text" class="form__input" name="user-name" id="user-name" />
+          <svg class="input__icon" width="18" height="18">
+            <use href="./images/icons.svg#icon-person"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="form__field">
+        <label class="input__text" for="user-tel">Телефон</label>
+        <div class="input__wrap">
+          <input type="tel" class="form__input" name="user-tel" id="user-tel" />
+          <svg class="input__icon" width="18" height="18">
+            <use href="./images/icons.svg#icon-phone"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="form__field">
+        <label class="input__text" for="user-email">Почта</label>
+        <div class="input__wrap">
+          <input type="email" class="form__input" name="user-email" id="user-email" />
+          <svg class="input__icon" width="18" height="18">
+            <use href="./images/icons.svg#icon-email-modal"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="form__field">
+        <label class="input__text" for="user-text">Комментарий</label>
+        <textarea name="user-text" id="user-text" class="form__text" placeholder="Введите текст"></textarea>
+      </div>
           <div class="form__field-checkbox">
             <input type="checkbox" name="policy" id="policy" class="policy__check visually-hidden" />
             <label for="policy" class="check__text">
-                <span>
-                  <svg class="policy__icon" width="11" height="8">
-                    <use href="./images/icons.svg#icon-vector"></use>
-                  </svg>
-                </span>
-                Соглашаюсь с рассылкой и принимаю &nbsp;<a href="#" class="check__text-link">Условия договора</a>
-              </label>
+              <span>
+                <svg class="policy__icon" width="11" height="8">
+                  <use href="./images/icons.svg#icon-vector"></use>
+                </svg>
+              </span>
+              Соглашаюсь с рассылкой и принимаю &nbsp;<a href="#" class="check__text-link">Условия договора</a>
+            </label>
           </div>
-          <div class="form__btn">
-          <button type="submit" class="hero__btn form__btn-send">Отправить</button>
-          </div>
-        </form>
+      <div class="form__btn">
+        <button type="submit" class="hero__btn form__btn-send">Отправить</button>
       </div>
-    </div>
+    </form>
+  </div>
+</div>
     <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>
   </body>

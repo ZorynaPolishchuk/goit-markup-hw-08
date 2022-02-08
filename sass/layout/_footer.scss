@@ -2,30 +2,66 @@
   background-color: var(--hero-color);
 }
 .footer__container {
-  display: flex;
   padding-top: 60px;
   padding-bottom: 60px;
+  @include tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  @include desk {
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
 }
-.footer__container-left,
-.footer__container-right,
+.footer__container-start,
+.footer__container-centr,
 .footer__container-end {
-  align-self: baseline;
+  text-align: center;
+  @include tab {
+    align-self: baseline;
+  }
+  @include desk {
+    text-align: left;
+  }
 }
-.footer__container-left {
-  flex-grow: 1;
+.footer__container-start {
+  padding-bottom: 60px;
+  @include desk {
+    padding-bottom: 0;
+    flex-grow: 1;
+  }
 }
-.footer__container-right {
-  padding-left: 70px;
+.footer__container-centr {
+  padding-bottom: 60px;
+  @include tab {
+    padding-left: 165px;
+    padding-bottom: 0;
+  }
+  @include desk {
+    padding-left: 70px;
+  }
 }
 .footer__container-end {
-  padding-left: 93px;
+  @include desk {
+    padding-left: 93px;
+  }
 }
 .footer-contact {
   list-style-type: none;
   font-style: normal;
 }
-.footer-contact__item:not(:last-child) {
-  margin-bottom: 9px;
+.footer-contact__item {
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+  @include desk {
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+  }
 }
 .footer-contact__address {
   @include font(14px, 400, 1.71);
@@ -42,15 +78,21 @@
 }
 .footer__title {
   @include font($fs: 14px, $lh: 1.14);
+  text-align: center;
   text-transform: uppercase;
   color: var(--primary-white-color);
   margin-bottom: 20px;
+  @include desk {
+    text-align: left;
+  }
 }
 .footer-social {
   @extend .team-social;
 }
 .footer-social__item {
-  @extend .team-social__item;
+  & + & {
+    margin-left: 10px;
+  }
 }
 .footer-social__link {
   @extend .team-social__link;
@@ -66,11 +108,20 @@
   fill: currentColor;
 }
 .footer__form-subscribe {
-  @extend %align-list;
-  justify-content: space-between;
+  @include tab {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  @include desk {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 .footer__form-online {
-  width: 358px;
+  width: 100%;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
@@ -79,12 +130,20 @@
   background-color: transparent;
   outline: none;
   padding: 15px;
-  margin-right: 12px;
+  margin-bottom: 20px;
   color: var(--primary-white-color);
   &::placeholder {
     @include font(16px, 400, 1.25);
     align-items: center;
     color: rgba(255, 255, 255, 0.6);
+  }
+  @include tab {
+    width: 450px;
+  }
+  @include desk {
+    width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0;
   }
 }
 .footer-submit__icon {

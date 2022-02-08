@@ -1,15 +1,23 @@
 .portfolio__container {
-  padding-bottom: var(--section-padding);
+  padding-top: 40px;
+  padding-bottom: 60px;
+  @include tab {
+    padding-top: 30px;
+  }
+  @include desk {
+    padding-top: 50px;
+    padding-bottom: var(--section-padding);
+  }
 }
 .portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
   margin-bottom: -30px;
+  @include tab {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
 }
 .portfolio-list__item {
-  width: calc(100% / 3 - 30px);
-  margin-left: 30px;
   margin-bottom: 30px;
   background-color: var(--primary-white-color);
   transition: box-shadow var(--transition-duration) var(--transition-timing-function);
@@ -17,6 +25,13 @@
   &:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+  @include tab {
+    width: calc(100% / 2 - 30px);
+    margin-left: 30px;
+  }
+  @include desk {
+    width: calc(100% / 3 - 30px);
   }
 }
 .portfolio-list__wrap {
@@ -30,12 +45,18 @@
   background-color: rgba(33, 150, 243, 0.9);
   color: var(--primary-white-color);
   @include font(18px, 400, 1.55);
-  padding: 63px 24px;
+  padding: 77px 24px;
   height: 100%;
   transform: translateY(100%);
   transition: transform var(--transition-duration) var(--transition-timing-function);
   .portfolio-list__item:hover & {
     transform: translateY(0);
+  }
+  @include tab {
+    padding: 49px 24px;
+  }
+  @include desk {
+    padding: 63px 24px;
   }
 }
 .img-name {
@@ -44,6 +65,10 @@
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
+  .portfolio-list__text:hover &,
+  .portfolio-list__item:hover & {
+    border: none;
+  }
 }
 .portfolio__title {
   @include font($fs: 18px, $lh: 2, $ls: 0.06em);

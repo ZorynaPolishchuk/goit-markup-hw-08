@@ -1,5 +1,10 @@
 .online__btn {
-  @extend %align-list;
-  justify-content: center;
   padding: 10px 28px;
+  @include tab {
+    display: flex;
+  }
+  @include desk {
+    align-items: center;
+    justify-content: center;
+  }
 }
