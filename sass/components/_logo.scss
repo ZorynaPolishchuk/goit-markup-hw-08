@@ -6,6 +6,9 @@
   text-decoration: none;
   font-family: Raleway, sans-serif;
   @include tab {
+    margin-right: 88px;
+  }
+  @include desk {
     margin-right: 93px;
   }
 }
