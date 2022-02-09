@@ -101,12 +101,12 @@
     <!-------------MAIN MENU CONTAINER----------------->
     <main>
       <!--------------------HERO SECTION----------------->
-<section class="hero">
+<!-- <section class="hero">
   <div class="container hero__container">
     <h1 class="hero__main-title">Эффективные решения для вашего бизнеса</h1>
     <button class="hero__btn" type="button" data-modal-open>Заказать услугу</button>
   </div>
-</section>
+</section> -->
 <!--------------------QUALITIES SECTION----------------->
 <!-- <section class="qualities">
   <div class="container qualities__container">
@@ -200,18 +200,21 @@
         </div>
       </section> -->
       <!--------------------TEAM SECTION----------------->
-      <!-- <section class="team">
+      <section class="team">
         <div class="container team__container">
           <h2 class="team__title">Наша команда</h2>
           <ul class="team-list">
             <li class="team-list__item">
-              <img
-                class="team-list__img"
-                src="./images/team-product-designer-img-4.jpg"
-                alt="дизайнер продукта"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source srcset="./images/team-product-designer-img-4.jpg 1x, ./images/team-product-designer-desk-2x.jpg 2x"
+                  media="(min-width: 1200px)"/>
+                <source srcset="./images/team-product-designer-tab-1x.jpg 1x, ./images/team-product-designer-tab-2x.jpg 2x"
+                  media="(min-width: 768px)"/>
+                <source srcset="./images/team-product-designer-mob-1x.jpg 1x, ./images/team-product-designer-mob-2x.jpg 2x"
+                  media="(min-width: 320px)"/>
+                <img class="team-list__img" src="./images/team-product-designer-img-4.jpg" alt="дизайнер продукта"
+                />
+              </picture>
               <div class="team-list__border">
                 <h3 class="employees__title">Игорь Демьяненко</h3>
                 <p class="employees__text" lang="en">Product Designer</p>
@@ -248,12 +251,17 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img class="team-list__img"
+              <picture>
+                <source srcset="./images/team-developer-img-5.jpg 1x, ./images/team-developer-desk-2x.jpg 2x"
+                  media="(min-width: 1200px)" />
+                <source srcset="./images/team-developer-tab-1x.jpg 1x, ./images/team-developer-tab-2x.jpg 2x"
+                  media="(min-width: 768px)" />
+                <source srcset="./images/team-developer-mob-1x.jpg 1x, ./images/team-developer-mob-2x.jpg 2x"
+                  media="(min-width: 320px)" />
+                <img class="team-list__img"
                 src="./images/team-developer-img-5.jpg"
-                alt="фронтенд разработчик"
-                width="270"
-                height="260"
-              />
+                alt="фронтенд разработчик" />
+              </picture>
               <div class="team-list__border">
                 <h3 class="employees__title">Ольга Репина</h3>
                 <p class="employees__text" lang="en">Frontend Developer</p>
@@ -290,8 +298,15 @@
               </div>
             </li>
               <li class="team-list__item">
-                <img class="team-list__img" src="./images/team-marketing-img-6.jpg" alt="маркетолог" width="270"
-                  height="260" />
+                  <picture>
+                    <source srcset="./images/team-marketing-img-6.jpg 1x, ./images/team-marketing-desk-2x.jpg 2x"
+                      media="(min-width: 1200px)" />
+                    <source srcset="./images/team-marketing-tab-1x.jpg 1x, ./images/team-marketing-tab-2x.jpg 2x"
+                      media="(min-width: 768px)" />
+                    <source srcset="./images/team-marketing-mob-1x.jpg 1x, ./images/team-marketing-mob-2x.jpg 2x"
+                      media="(min-width: 320px)" />
+                    <img class="team-list__img" src="./images/team-marketing-img-6.jpg" alt="маркетолог" />
+                  </picture>
               <div class="team-list__border">
                 <h3 class="employees__title">Николай Тарасов</h3>
                 <p class="employees__text" lang="en">Marketing</p>
@@ -328,13 +343,17 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img
-                class="team-list__img"
+              <picture>
+                <source srcset="./images/team-ui-designer-img-7.jpg 1x, ./images/team-ui-designer-desk-2x.jpg 2x"
+                  media="(min-width: 1200px)" />
+                <source srcset="./images/team-ui-designer-tab-1x.jpg 1x, ./images/team-ui-designer-tab-2x.jpg 2x"
+                  media="(min-width: 768px)" />
+                <source srcset="./images/team-ui-designer-mob-1x.jpg 1x, ./images/team-ui-designer-mob-2x.jpg 2x"
+                  media="(min-width: 320px)" />
+                <img class="team-list__img"
                 src="./images/team-ui-designer-img-7.jpg"
-                alt="дизайнер интерфейсов"
-                width="270"
-                height="260"
-              />
+                alt="дизайнер интерфейсов"/>
+              </picture>
               <div class="team-list__border">
                 <h3 class="employees__title">Михаил Ермаков</h3>
                 <p class="employees__text" lang="en">UI Designer</p>
@@ -372,7 +391,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 <!---------------CLIENTS SECTION--------------->
       <!-- <section class="clients">
         <div class="container clients__container">

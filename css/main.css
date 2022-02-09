@@ -697,7 +697,6 @@ img {
 }
 
 .hero {
-  max-width: 480px;
   padding-top: 118px;
   padding-bottom: 118px;
   margin-left: auto;
@@ -719,7 +718,6 @@ img {
 
 @media screen and (min-width: 768px) {
   .hero {
-    max-width: 768px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background-image-tab-1x.jpg);
   }
 }
