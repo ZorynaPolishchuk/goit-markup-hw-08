@@ -101,14 +101,14 @@
     <!-------------MAIN MENU CONTAINER----------------->
     <main>
       <!--------------------HERO SECTION----------------->
-<!-- <section class="hero">
+<section class="hero">
   <div class="container hero__container">
     <h1 class="hero__main-title">Эффективные решения для вашего бизнеса</h1>
     <button class="hero__btn" type="button" data-modal-open>Заказать услугу</button>
   </div>
-</section> -->
+</section>
 <!--------------------QUALITIES SECTION----------------->
-<!-- <section class="qualities">
+<section class="qualities">
   <div class="container qualities__container">
     <ul class="qualities-content">
       <li class="qualities-content__item">
@@ -157,48 +157,48 @@
       </li>
     </ul>    
   </div>
-</section> -->
+</section>
       <!--------------------WORK SECTION----------------->
-      <!-- <section class="work">
+      <section class="work">
         <div class="container work__container">
           <h2 class="work__title">Чем мы занимаемся</h2>
           <ul class="work-list">
             <li class="work-list__item">
               <div class="work-list__wrap">
-              <img
-                src="./images/work-computer-img-1.jpg"
-                alt="человек работает за компьютером"
-                width="370"
-                height="294"
-              />
+                <picture>
+                  <source srcset="./images/work-computer-img-1.jpg 1x, ./images/work-computer-desk-2x.jpg 2x"
+                    media="(min-width: 1200px)" />
+                  <img src="./images/work-computer-img-1.jpg"
+                  alt="человек работает за компьютером"/>
+                </picture>
               <p class="work-list__text">Десктопные приложения</p>
               </div>
             </li>
             <li class="work-list__item">
               <div class="work-list__wrap">
-              <img
-                src="./images/work-mobile-phone-img-2.jpg"
-                alt="человек работает в мобильном телефоне"
-                width="370"
-                height="294"
-              />
+                <picture>
+                  <source srcset="./images/work-mobile-phone-img-2.jpg 1x, ./images/work-mobile-phone-desk-2x.jpg 2x"
+                    media="(min-width: 1200px)" />
+                  <img  src="./images/work-mobile-phone-img-2.jpg"
+                  alt="человек работает в мобильном телефоне"/>
+                </picture>
               <p class="work-list__text">Мобильные приложения</p>
               </div>
             </li>
             <li class="work-list__item">
               <div class="work-list__wrap">
-              <img
-                src="./images/work-tablet-img-3.jpg"
-                alt="человек работает в планшете"
-                width="370"
-                height="294"
-              />
+                <picture>
+                  <source srcset="./images/work-tablet-img-3.jpg 1x, ./images/work-tablet-desk-2x.jpg 2x"
+                    media="(min-width: 1200px)" />
+                  <img src="./images/work-tablet-img-3.jpg"
+                  alt="человек работает в планшете"/>
+                </picture>
               <p class="work-list__text">Дизайнерские решения</p>
               </div>
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!--------------------TEAM SECTION----------------->
       <section class="team">
         <div class="container team__container">
@@ -393,7 +393,7 @@
         </div>
       </section>
 <!---------------CLIENTS SECTION--------------->
-      <!-- <section class="clients">
+      <section class="clients">
         <div class="container clients__container">
           <h2 class="clients__title">Постоянные клиенты</h2>
           <ul class="clients-list">
@@ -442,7 +442,7 @@
           </ul>
         </div>
       </section>
-    </main> -->
+    </main>
     <!----------FOOTER MENU CONTAINER-------------------->
     <footer class="footer">
       <div class="container footer__container">
