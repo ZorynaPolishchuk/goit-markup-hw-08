@@ -126,43 +126,52 @@
   }
 }
 .form__field-checkbox {
-  @extend %align-list;
-  justify-content: center;
   margin-top: 20px;
   margin-bottom: 30px;
-}
-.check__text {
-  @extend %align-list;
-  @include font(14px, 400, 1.71);
-  color: var(--primary-text-color);
-  position: relative;
-  justify-content: center;
-}
-.check__text-link {
-  text-decoration-line: underline;
-  color: var(--accent-color);
-}
-.check__text {
-  span {
-    @extend %align-list;
-    width: 16px;
-    height: 15px;
-    border: 2px solid var(--title-text-color);
-    border-radius: 2px;
-    margin-right: 8px;
+  @include desk {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    cursor: pointer;
   }
 }
-.policy__icon {
-  fill: transparent;
+.check__text {
+  font-size: 12px;
+  line-height: 1.17;
+  color: var(--primary-text-color);
+  display: flex;
+  align-items: center;
+  &::before {
+    content: '';
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--primary-text-color);
+    border-radius: 2px;
+    margin-right: 7px;
+  }
+  @include desk {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
-.policy__check:checked + .check__text span {
+.policy-check:checked + .check__text::before {
   border: none;
-  background-color: var(--accent-color);
+  background-image: url(../images/icon-check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
-.policy__check:checked + .check__text .policy__icon {
-  fill: var(--primary-white-color);
+.check__link {
+  font-size: 12px;
+  line-height: 1.17;
+  text-decoration-line: underline;
+  color: var(--accent-color);
+  margin-left: 5px;
+  @include desk {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
 .form__btn {
   @extend %align-list;

@@ -62,7 +62,7 @@ img {
   margin: -1px;
 }
 
-.modal__btn-close, .form__field-checkbox, .check__text, .check__text span, .form__btn, .header__container, .qualities-content__thum, .team-social__link, .footer-social__link, .clients-list__link {
+.modal__btn-close, .form__btn, .header__container, .qualities-content__thum, .team-social__link, .footer-social__link, .clients-list__link {
   display: flex;
   align-items: center;
 }
@@ -348,47 +348,65 @@ img {
 }
 
 .form__field-checkbox {
-  justify-content: center;
   margin-top: 20px;
   margin-bottom: 30px;
 }
 
+@media screen and (min-width: 1200px) {
+  .form__field-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 .check__text {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  font-size: 12px;
+  line-height: 1.17;
   color: var(--primary-text-color);
-  position: relative;
-  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 
-.check__text-link {
-  text-decoration-line: underline;
-  color: var(--accent-color);
-}
-
-.check__text span {
+.check__text::before {
+  content: '';
   width: 16px;
   height: 15px;
-  border: 2px solid var(--title-text-color);
+  border: 2px solid var(--primary-text-color);
   border-radius: 2px;
-  margin-right: 8px;
-  justify-content: center;
-  cursor: pointer;
+  margin-right: 7px;
 }
 
-.policy__icon {
-  fill: transparent;
+@media screen and (min-width: 1200px) {
+  .check__text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
 
-.policy__check:checked + .check__text span {
+.policy-check:checked + .check__text::before {
   border: none;
-  background-color: var(--accent-color);
+  background-image: url(../images/icon-check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.policy__check:checked + .check__text .policy__icon {
-  fill: var(--primary-white-color);
+.check__link {
+  font-size: 12px;
+  line-height: 1.17;
+  text-decoration-line: underline;
+  color: var(--accent-color);
+  margin-left: 5px;
+}
+
+@media screen and (min-width: 1200px) {
+  .check__link {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
 
 .form__btn {

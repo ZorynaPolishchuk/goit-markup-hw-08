@@ -557,17 +557,12 @@
         <label class="input__text" for="user-text">Комментарий</label>
         <textarea name="user-text" id="user-text" class="form__text" placeholder="Введите текст"></textarea>
       </div>
-          <div class="form__field-checkbox">
-            <input type="checkbox" name="policy" id="policy" class="policy__check visually-hidden" />
-            <label for="policy" class="check__text">
-              <span>
-                <svg class="policy__icon" width="11" height="8">
-                  <use href="./images/icons.svg#icon-vector"></use>
-                </svg>
-              </span>
-              Соглашаюсь с рассылкой и принимаю &nbsp;<a href="#" class="check__text-link">Условия договора</a>
-            </label>
-          </div>
+      <div class="form__field-checkbox">
+        <input type="checkbox" name="policy" id="policy" class="policy-check visually-hidden" />
+        <label for="policy" class="check__text">Соглашаюсь с рассылкой и принимаю
+          <span><a href="" class="link check__link">Условия договора</a></span>
+        </label>
+      </div>
       <div class="form__btn">
         <button type="submit" class="hero__btn form__btn-send">Отправить</button>
       </div>
