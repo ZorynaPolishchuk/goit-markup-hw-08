@@ -1422,10 +1422,18 @@ img {
   margin-bottom: 30px;
   background-color: var(--primary-white-color);
   transition: box-shadow var(--transition-duration) var(--transition-timing-function);
+  box-sizing: border-box;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
 }
 
 .portfolio-list__item:hover, .portfolio-list__item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-list__text:hover .portfolio-list__item {
+  border: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -1480,15 +1488,6 @@ img {
 
 .img-name {
   padding: 20px 24px;
-  box-sizing: border-box;
-  border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
-}
-
-.portfolio-list__text:hover .img-name,
-.portfolio-list__item:hover .img-name {
-  border: none;
 }
 
 .portfolio__title {

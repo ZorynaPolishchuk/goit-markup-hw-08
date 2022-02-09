@@ -26,6 +26,13 @@
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
+  box-sizing: border-box;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  .portfolio-list__text:hover & {
+    border: none;
+  }
   @include tab {
     width: calc(100% / 2 - 30px);
     margin-left: 30px;
@@ -61,14 +68,6 @@
 }
 .img-name {
   padding: 20px 24px;
-  box-sizing: border-box;
-  border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
-  .portfolio-list__text:hover &,
-  .portfolio-list__item:hover & {
-    border: none;
-  }
 }
 .portfolio__title {
   @include font($fs: 18px, $lh: 2, $ls: 0.06em);
