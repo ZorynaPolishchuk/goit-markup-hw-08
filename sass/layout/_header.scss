@@ -2,8 +2,14 @@
   border-bottom: 1px solid #ececec;
 }
 .header__container {
+  padding-top: 10px;
+  padding-bottom: 10px;
   @extend %align-list;
   justify-content: center;
+  @include tab {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 .site-nav {
   justify-content: center;
@@ -57,6 +63,7 @@
   }
   @include desk {
     display: flex;
+    align-items: baseline;
   }
 }
 .connection {
@@ -90,6 +97,7 @@
   @include desk {
     font-size: 14px;
     line-height: 1.14;
+    align-items: center;
   }
 }
 .site-connect__icon-tab {
@@ -124,6 +132,8 @@
   }
 }
 .menu-open-btn {
+  width: 40px;
+  height: 40px;
   margin-left: auto;
   border: none;
   background-color: var(--primary-white-color);
